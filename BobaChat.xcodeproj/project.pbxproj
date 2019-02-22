@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE1AF59B221F95430078B2F8 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1AF59A221F95430078B2F8 /* LogInViewController.swift */; };
 		CE25FD82221D2595005029CD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE25FD81221D2595005029CD /* AppDelegate.swift */; };
-		CE25FD84221D2595005029CD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE25FD83221D2595005029CD /* ViewController.swift */; };
 		CE25FD87221D2595005029CD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE25FD85221D2595005029CD /* Main.storyboard */; };
 		CE25FD8A221D2595005029CD /* BobaChat.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CE25FD88221D2595005029CD /* BobaChat.xcdatamodeld */; };
 		CE25FD8C221D2597005029CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE25FD8B221D2597005029CD /* Assets.xcassets */; };
@@ -16,9 +16,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CE1AF59A221F95430078B2F8 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		CE25FD7E221D2595005029CD /* BobaChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BobaChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE25FD81221D2595005029CD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CE25FD83221D2595005029CD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CE25FD86221D2595005029CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CE25FD89221D2595005029CD /* BobaChat.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BobaChat.xcdatamodel; sourceTree = "<group>"; };
 		CE25FD8B221D2597005029CD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -57,7 +57,7 @@
 			isa = PBXGroup;
 			children = (
 				CE25FD81221D2595005029CD /* AppDelegate.swift */,
-				CE25FD83221D2595005029CD /* ViewController.swift */,
+				CE1AF59A221F95430078B2F8 /* LogInViewController.swift */,
 				CE25FD85221D2595005029CD /* Main.storyboard */,
 				CE25FD8B221D2597005029CD /* Assets.xcassets */,
 				CE25FD8D221D2597005029CD /* LaunchScreen.storyboard */,
@@ -138,8 +138,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE1AF59B221F95430078B2F8 /* LogInViewController.swift in Sources */,
 				CE25FD8A221D2595005029CD /* BobaChat.xcdatamodeld in Sources */,
-				CE25FD84221D2595005029CD /* ViewController.swift in Sources */,
 				CE25FD82221D2595005029CD /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
