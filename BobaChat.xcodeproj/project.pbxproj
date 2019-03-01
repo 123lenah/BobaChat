@@ -13,6 +13,7 @@
 		CE25FD8A221D2595005029CD /* BobaChat.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CE25FD88221D2595005029CD /* BobaChat.xcdatamodeld */; };
 		CE25FD8C221D2597005029CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE25FD8B221D2597005029CD /* Assets.xcassets */; };
 		CE25FD8F221D2597005029CD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE25FD8D221D2597005029CD /* LaunchScreen.storyboard */; };
+		CEDBB6652228E196005A1B57 /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDBB6642228E196005A1B57 /* CreateAccountViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		CE25FD8B221D2597005029CD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE25FD8E221D2597005029CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE25FD90221D2597005029CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CEDBB6642228E196005A1B57 /* CreateAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 			children = (
 				CE25FD81221D2595005029CD /* AppDelegate.swift */,
 				CE1AF59A221F95430078B2F8 /* LogInViewController.swift */,
+				CEDBB6642228E196005A1B57 /* CreateAccountViewController.swift */,
 				CE25FD85221D2595005029CD /* Main.storyboard */,
 				CE25FD8B221D2597005029CD /* Assets.xcassets */,
 				CE25FD8D221D2597005029CD /* LaunchScreen.storyboard */,
@@ -138,6 +141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEDBB6652228E196005A1B57 /* CreateAccountViewController.swift in Sources */,
 				CE1AF59B221F95430078B2F8 /* LogInViewController.swift in Sources */,
 				CE25FD8A221D2595005029CD /* BobaChat.xcdatamodeld in Sources */,
 				CE25FD82221D2595005029CD /* AppDelegate.swift in Sources */,

@@ -77,7 +77,7 @@ class LogInViewController: UIViewController {
         //Contraints for overlay image
         overlay.translatesAutoresizingMaskIntoConstraints = false
         overlay.centerXAnchor.constraint(equalTo: view.centerXAnchor, constant: 1).isActive = true
-        overlay.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: 1).isActive = true
+        overlay.topAnchor.constraint(equalToSystemSpacingBelow: view.topAnchor, multiplier: screenHeight*0.013).isActive = true
         overlay.heightAnchor.constraint(equalToConstant: screenHeight*0.859).isActive = true
         overlay.widthAnchor.constraint(equalToConstant: screenWidth).isActive = true
         
