@@ -67,6 +67,8 @@ class LogInViewController: UIViewController {
             return UIScreen.main.bounds.height
         }
         
+        print("we are on scroll view!")
+        
         //Constraints for background image
         backgroundImage.translatesAutoresizingMaskIntoConstraints = false
         backgroundImage.topAnchor.constraint(equalTo: view.topAnchor, constant: 0).isActive = true
