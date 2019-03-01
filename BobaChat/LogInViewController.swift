@@ -39,8 +39,14 @@ class LogInViewController: UIViewController {
 
         //Update Constraints
         tweakUIAndConstaints()
+        
     }
     
+    override func viewDidLayoutSubviews() {
+        //Make usernameTextField and passwordTextField one line
+        usernameTextField.makeOneLine()
+        passwordTextField.makeOneLine()
+    }
     
 
     /*
@@ -72,7 +78,7 @@ class LogInViewController: UIViewController {
         overlay.translatesAutoresizingMaskIntoConstraints = false
         overlay.centerXAnchor.constraint(equalTo: view.centerXAnchor, constant: 1).isActive = true
         overlay.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: 1).isActive = true
-        overlay.heightAnchor.constraint(equalToConstant: screenHeight-100).isActive = true
+        overlay.heightAnchor.constraint(equalToConstant: screenHeight*0.859).isActive = true
         overlay.widthAnchor.constraint(equalToConstant: screenWidth).isActive = true
         
         //Contraints for BobaChatImage
@@ -82,10 +88,6 @@ class LogInViewController: UIViewController {
         BobaChatImage.widthAnchor.constraint(equalToConstant: screenWidth*0.32).isActive = true
         BobaChatImage.topAnchor.constraint(equalTo: overlay.topAnchor, constant: screenHeight*0.18).isActive = true
         
-        //Make usernameTextField and passwordTextField one line
-        usernameTextField.makeOneLine()
-        passwordTextField.makeOneLine()
-        
         //Add in default text/font
         usernameTextField.font = UIFont(name: "Kohinoor Bangla", size: BobaChatImage.frame.height*0.8)
         passwordTextField.font = UIFont(name: "Kohinoor Bangla", size: BobaChatImage.frame.height*0.8)
@@ -93,19 +95,32 @@ class LogInViewController: UIViewController {
         passwordTextField.placeholder = "Enter Password..."
         
         
-        /*//Constraints for usernameTextField
+        //Constraints for usernameTextField
         usernameTextField.translatesAutoresizingMaskIntoConstraints = false
-        usernameTextField.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        usernameTextField.topAnchor.constraint(equalToSystemSpacingBelow: BobaChatImage.bottomAnchor, multiplier: screenHeight*0.18).isActive = true
-        usernameTextField.widthAnchor.constraint(equalToConstant: screenWidth*0.32).isActive = true
-        BobaChatImage.topAnchor.constraint(equalTo: overlay.topAnchor, constant: screenHeight*0.18).isActive = true
+        usernameTextField.centerXAnchor.constraint(equalTo: view.centerXAnchor, constant: 1).isActive = true
+        usernameTextField.topAnchor.constraint(equalToSystemSpacingBelow: BobaChatImage.bottomAnchor, multiplier: 5).isActive = true
+        usernameTextField.widthAnchor.constraint(equalToConstant: screenWidth*0.42).isActive = true
         
         
         //Constraints for passwordTextField
-        passwordTextField.widthAnchor.constraint(equalToConstant: 165).isActive = true
-        passwordTextField.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        passwordTextField.topAnchor.constraint(equalTo: usernameTextField.topAnchor, constant: screenHeight*0.18).isActive = true*/
+        passwordTextField.translatesAutoresizingMaskIntoConstraints = false
+        passwordTextField.centerXAnchor.constraint(equalTo: view.centerXAnchor, constant: 1).isActive = true
+        passwordTextField.topAnchor.constraint(equalToSystemSpacingBelow: usernameTextField.bottomAnchor, multiplier: 5).isActive = true
+        passwordTextField.widthAnchor.constraint(equalTo: usernameTextField.widthAnchor, multiplier: 1).isActive = true
         
+        //Constaints for logInButton
+        logInButton.translatesAutoresizingMaskIntoConstraints = false
+        logInButton.centerXAnchor.constraint(equalTo: view.centerXAnchor, constant: 1).isActive = true
+        //logInButton.topAnchor.constraint(equalToSystemSpacingBelow: passwordTextField.bottomAnchor, multiplier: screenHeight*0.0088).isActive = true
+        logInButton.topAnchor.constraint(equalToSystemSpacingBelow: passwordTextField.bottomAnchor, multiplier: screenHeight*0.009).isActive = true
+        logInButton.widthAnchor.constraint(equalToConstant: screenWidth*0.50).isActive = true
+        
+        //Constraints for createAccountButton
+        createAccountButton.translatesAutoresizingMaskIntoConstraints = false
+        createAccountButton.centerXAnchor.constraint(equalTo: view.centerXAnchor, constant: 1).isActive = true
+        //createAccountButton.topAnchor.constraint(equalToSystemSpacingBelow: logInButton.bottomAnchor, multiplier: screenHeight*0.003521).isActive = true
+        createAccountButton.topAnchor.constraint(equalToSystemSpacingBelow: logInButton.bottomAnchor, multiplier: screenHeight*0.005).isActive = true
+        createAccountButton.widthAnchor.constraint(equalTo: logInButton.widthAnchor, multiplier: 1).isActive = true
         
     }
 
