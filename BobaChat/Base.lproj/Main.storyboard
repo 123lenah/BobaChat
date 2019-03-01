@@ -15,9 +15,13 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="LogInViewController" customModule="BobaChat" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="1000"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xA2-tn-AkN">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </scrollView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bubble_tea_background" translatesAutoresizingMaskIntoConstraints="NO" id="lhO-Kd-4Dm">
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -61,6 +65,7 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <size key="freeformSize" width="375" height="1000"/>
                     <connections>
                         <outlet property="BobaChatImage" destination="8Vp-Qk-DXK" id="KgQ-Ta-8fW"/>
                         <outlet property="backgroundImage" destination="lhO-Kd-4Dm" id="m3Y-Zg-mLs"/>
@@ -68,6 +73,7 @@
                         <outlet property="logInButton" destination="nKJ-xQ-aVx" id="dnm-wD-lis"/>
                         <outlet property="overlay" destination="nL6-QP-6XM" id="9Wk-IV-6nM"/>
                         <outlet property="passwordTextField" destination="NtC-iu-hVi" id="Ud5-k2-RXn"/>
+                        <outlet property="scrollView" destination="xA2-tn-AkN" id="GVp-Sw-aGq"/>
                         <outlet property="usernameTextField" destination="SrK-w1-sDb" id="i2X-mZ-lcx"/>
                     </connections>
                 </viewController>
