@@ -8,58 +8,44 @@
 
 import UIKit
 
-extension UITextField {
-    func makeOneLine() {
-        let textFieldBottom = CALayer()
-        let borderWidth = CGFloat(1.0)
-        textFieldBottom.frame = CGRect(x: 0, y: self.frame.height - borderWidth, width: self.frame.width, height: self.frame.height)
-        textFieldBottom.backgroundColor = UIColor.lightGray.cgColor
-        self.borderStyle = UITextField.BorderStyle.none
-        self.layer.addSublayer(textFieldBottom)
-        self.layer.masksToBounds = true
-    }
-}
-
 final class LogInViewController: UIViewController {
     
-    // self.textField.layer.addBorder(edge: UIRectEdge.bottom, color: UIColor.red, thickness: 2, width: textFieldConstraintWidth.constant)
+    // MARK: - IBOutlets
     
-    @IBOutlet weak var createAccountButton: UIButton!
-    @IBOutlet weak var logInButton: UIButton!
-    @IBOutlet weak var backgroundImage: UIImageView!
+    @IBOutlet fileprivate weak var createAccountButton: UIButton!
+    @IBOutlet fileprivate weak var logInButton: UIButton!
+    @IBOutlet fileprivate weak var backgroundImage: UIImageView!
+    @IBOutlet fileprivate weak var passwordTextField: UITextField!
+    @IBOutlet fileprivate weak var usernameTextField: UITextField!
+    @IBOutlet fileprivate weak var overlay: UIImageView!
+    @IBOutlet fileprivate weak var BobaChatImage: UIImageView!
     
-    @IBOutlet weak var passwordTextField: UITextField!
-    @IBOutlet weak var usernameTextField: UITextField!
-    @IBOutlet weak var overlay: UIImageView!
+    // MARK: - Properties
     
-    @IBOutlet weak var BobaChatImage: UIImageView!
+    // Offset between subviews
+    fileprivate let subviewHeightOffset: CGFloat = 0.03
     
-    override func viewDidLoad() {
+    // MARK: - View Lifecycle
+    
+    override internal func viewDidLoad() {
         super.viewDidLoad()
 
         //Update Constraints
         tweakUIAndConstaints()
-        
     }
     
-    override func viewDidLayoutSubviews() {
+    override func viewDidAppear(_ animated: Bool) {
+        // Show Navigation Bar
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
+    }
+    
+    override internal func viewDidLayoutSubviews() {
         //Make usernameTextField and passwordTextField one line
         usernameTextField.makeOneLine()
         passwordTextField.makeOneLine()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-    
-    func tweakUIAndConstaints() {
+    fileprivate func tweakUIAndConstaints() {
         var screenWidth: CGFloat {
             return UIScreen.main.bounds.width
         }
@@ -84,7 +70,7 @@ final class LogInViewController: UIViewController {
         //Contraints for BobaChatImage
         BobaChatImage.translatesAutoresizingMaskIntoConstraints = false
         BobaChatImage.centerXAnchor.constraint(equalTo: view.centerXAnchor, constant: 1).isActive = true
-        BobaChatImage.heightAnchor.constraint(equalToConstant: screenHeight*0.03).isActive = true
+        BobaChatImage.heightAnchor.constraint(equalToConstant: screenHeight*subviewHeightOffset).isActive = true
         BobaChatImage.widthAnchor.constraint(equalToConstant: screenWidth*0.32).isActive = true
         BobaChatImage.topAnchor.constraint(equalTo: overlay.topAnchor, constant: screenHeight*0.18).isActive = true
         
@@ -95,33 +81,30 @@ final class LogInViewController: UIViewController {
         passwordTextField.placeholder = "Enter Password..."
         
         
-        //Constraints for usernameTextField
+        // Constraints for usernameTextField
         usernameTextField.translatesAutoresizingMaskIntoConstraints = false
         usernameTextField.centerXAnchor.constraint(equalTo: view.centerXAnchor, constant: 1).isActive = true
         usernameTextField.topAnchor.constraint(equalToSystemSpacingBelow: BobaChatImage.bottomAnchor, multiplier: 5).isActive = true
         usernameTextField.widthAnchor.constraint(equalToConstant: screenWidth*0.42).isActive = true
         
         
-        //Constraints for passwordTextField
+        // Constraints for passwordTextField
         passwordTextField.translatesAutoresizingMaskIntoConstraints = false
         passwordTextField.centerXAnchor.constraint(equalTo: view.centerXAnchor, constant: 1).isActive = true
         passwordTextField.topAnchor.constraint(equalToSystemSpacingBelow: usernameTextField.bottomAnchor, multiplier: 5).isActive = true
         passwordTextField.widthAnchor.constraint(equalTo: usernameTextField.widthAnchor, multiplier: 1).isActive = true
         
-        //Constaints for logInButton
+        // Constaints for logInButton
         logInButton.translatesAutoresizingMaskIntoConstraints = false
         logInButton.centerXAnchor.constraint(equalTo: view.centerXAnchor, constant: 1).isActive = true
-        //logInButton.topAnchor.constraint(equalToSystemSpacingBelow: passwordTextField.bottomAnchor, multiplier: screenHeight*0.0088).isActive = true
         logInButton.topAnchor.constraint(equalToSystemSpacingBelow: passwordTextField.bottomAnchor, multiplier: screenHeight*0.009).isActive = true
         logInButton.widthAnchor.constraint(equalToConstant: screenWidth*0.50).isActive = true
         
-        //Constraints for createAccountButton
+        // Constraints for createAccountButton
         createAccountButton.translatesAutoresizingMaskIntoConstraints = false
         createAccountButton.centerXAnchor.constraint(equalTo: view.centerXAnchor, constant: 1).isActive = true
         //createAccountButton.topAnchor.constraint(equalToSystemSpacingBelow: logInButton.bottomAnchor, multiplier: screenHeight*0.003521).isActive = true
         createAccountButton.topAnchor.constraint(equalToSystemSpacingBelow: logInButton.bottomAnchor, multiplier: screenHeight*0.005).isActive = true
         createAccountButton.widthAnchor.constraint(equalTo: logInButton.widthAnchor, multiplier: 1).isActive = true
-        
     }
-
 }

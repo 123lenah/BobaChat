@@ -8,32 +8,30 @@
 
 import UIKit
 
-class CreateAccountViewController: UIViewController {
+final class CreateAccountViewController: UIViewController {
 
+    // MARK: - IBOutlets
     @IBOutlet weak var backgroundImage: UIImageView!
     @IBOutlet weak var registerButton: UIButton!
     @IBOutlet weak var addPasswordTextField: UITextField!
     @IBOutlet weak var addUsernameTextField: UITextField!
     @IBOutlet weak var overlay2: UIImageView!
-    override func viewDidLoad() {
+    
+    // MARK: - View Lifecycle
+    
+    override internal func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        // Show Navigation Bar
+        self.navigationController?.setNavigationBarHidden(false, animated: true)
     }
-    override func viewDidLayoutSubviews() {
+    
+    override internal func viewWillDisappear(_ animated: Bool) {
+        // Show Navigation Bar
+        self.navigationController?.setNavigationBarHidden(true, animated: true)
+    }
+    override internal func viewDidLayoutSubviews() {
         addPasswordTextField.makeOneLine()
         addUsernameTextField.makeOneLine()
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
