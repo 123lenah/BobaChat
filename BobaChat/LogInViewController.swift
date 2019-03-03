@@ -20,7 +20,7 @@ extension UITextField {
     }
 }
 
-class LogInViewController: UIViewController {
+final class LogInViewController: UIViewController {
     
     // self.textField.layer.addBorder(edge: UIRectEdge.bottom, color: UIColor.red, thickness: 2, width: textFieldConstraintWidth.constant)
     
