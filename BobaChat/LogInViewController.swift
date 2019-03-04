@@ -53,23 +53,40 @@ final class LogInViewController: UIViewController {
             return UIScreen.main.bounds.height
         }
         
-        //Constraints for background image
-        backgroundImage.translatesAutoresizingMaskIntoConstraints = false
-        backgroundImage.topAnchor.constraint(equalTo: view.topAnchor, constant: 0).isActive = true
-        backgroundImage.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 0).isActive = true
-        backgroundImage.rightAnchor.constraint(equalTo: view.rightAnchor, constant: 0).isActive = true
-        backgroundImage.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0).isActive = true
+        // Setting up a ScrollView
+        let scrollView: UIScrollView = {
+            let sv = UIScrollView()
+            return sv
+        }()
+        self.view.addSubview(scrollView)
         
-        //Contraints for overlay image
+        // Constraints for scrollView
+        scrollView.translatesAutoresizingMaskIntoConstraints = false
+        scrollView.topAnchor.constraint(equalTo: view.topAnchor, constant: 0).isActive = true
+        scrollView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 0).isActive = true
+        scrollView.rightAnchor.constraint(equalTo: view.rightAnchor, constant: 0).isActive = true
+        scrollView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0).isActive = true
+        
+        // Constraints for background image
+        scrollView.addSubview(backgroundImage)
+        backgroundImage.translatesAutoresizingMaskIntoConstraints = false
+        backgroundImage.topAnchor.constraint(equalTo: scrollView.topAnchor, constant: 0).isActive = true
+        backgroundImage.leftAnchor.constraint(equalTo: scrollView.leftAnchor, constant: 0).isActive = true
+        backgroundImage.rightAnchor.constraint(equalTo: scrollView.rightAnchor, constant: 0).isActive = true
+        backgroundImage.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor, constant: 0).isActive = true
+        
+        // Contraints for overlay image
+        scrollView.addSubview(overlay)
         overlay.translatesAutoresizingMaskIntoConstraints = false
-        overlay.centerXAnchor.constraint(equalTo: view.centerXAnchor, constant: 1).isActive = true
-        overlay.topAnchor.constraint(equalToSystemSpacingBelow: view.topAnchor, multiplier: screenHeight*0.013).isActive = true
+        overlay.centerXAnchor.constraint(equalTo: scrollView.centerXAnchor, constant: 1).isActive = true
+        overlay.topAnchor.constraint(equalToSystemSpacingBelow: scrollView.topAnchor, multiplier: screenHeight*0.013).isActive = true
         overlay.heightAnchor.constraint(equalToConstant: screenHeight*0.859).isActive = true
         overlay.widthAnchor.constraint(equalToConstant: screenWidth).isActive = true
         
         //Contraints for BobaChatImage
+        scrollView.addSubview(BobaChatImage)
         BobaChatImage.translatesAutoresizingMaskIntoConstraints = false
-        BobaChatImage.centerXAnchor.constraint(equalTo: view.centerXAnchor, constant: 1).isActive = true
+        BobaChatImage.centerXAnchor.constraint(equalTo: scrollView.centerXAnchor, constant: 1).isActive = true
         BobaChatImage.heightAnchor.constraint(equalToConstant: screenHeight*subviewHeightOffset).isActive = true
         BobaChatImage.widthAnchor.constraint(equalToConstant: screenWidth*0.32).isActive = true
         BobaChatImage.topAnchor.constraint(equalTo: overlay.topAnchor, constant: screenHeight*0.18).isActive = true
@@ -82,27 +99,31 @@ final class LogInViewController: UIViewController {
         
         
         // Constraints for usernameTextField
+        scrollView.addSubview(usernameTextField)
         usernameTextField.translatesAutoresizingMaskIntoConstraints = false
-        usernameTextField.centerXAnchor.constraint(equalTo: view.centerXAnchor, constant: 1).isActive = true
+        usernameTextField.centerXAnchor.constraint(equalTo: scrollView.centerXAnchor, constant: 1).isActive = true
         usernameTextField.topAnchor.constraint(equalToSystemSpacingBelow: BobaChatImage.bottomAnchor, multiplier: 5).isActive = true
         usernameTextField.widthAnchor.constraint(equalToConstant: screenWidth*0.42).isActive = true
         
         
         // Constraints for passwordTextField
+        scrollView.addSubview(passwordTextField)
         passwordTextField.translatesAutoresizingMaskIntoConstraints = false
-        passwordTextField.centerXAnchor.constraint(equalTo: view.centerXAnchor, constant: 1).isActive = true
+        passwordTextField.centerXAnchor.constraint(equalTo: scrollView.centerXAnchor, constant: 1).isActive = true
         passwordTextField.topAnchor.constraint(equalToSystemSpacingBelow: usernameTextField.bottomAnchor, multiplier: 5).isActive = true
         passwordTextField.widthAnchor.constraint(equalTo: usernameTextField.widthAnchor, multiplier: 1).isActive = true
         
         // Constaints for logInButton
+        scrollView.addSubview(logInButton)
         logInButton.translatesAutoresizingMaskIntoConstraints = false
-        logInButton.centerXAnchor.constraint(equalTo: view.centerXAnchor, constant: 1).isActive = true
+        logInButton.centerXAnchor.constraint(equalTo: scrollView.centerXAnchor, constant: 1).isActive = true
         logInButton.topAnchor.constraint(equalToSystemSpacingBelow: passwordTextField.bottomAnchor, multiplier: screenHeight*0.009).isActive = true
         logInButton.widthAnchor.constraint(equalToConstant: screenWidth*0.50).isActive = true
         
         // Constraints for createAccountButton
+        scrollView.addSubview(createAccountButton)
         createAccountButton.translatesAutoresizingMaskIntoConstraints = false
-        createAccountButton.centerXAnchor.constraint(equalTo: view.centerXAnchor, constant: 1).isActive = true
+        createAccountButton.centerXAnchor.constraint(equalTo: scrollView.centerXAnchor, constant: 1).isActive = true
         //createAccountButton.topAnchor.constraint(equalToSystemSpacingBelow: logInButton.bottomAnchor, multiplier: screenHeight*0.003521).isActive = true
         createAccountButton.topAnchor.constraint(equalToSystemSpacingBelow: logInButton.bottomAnchor, multiplier: screenHeight*0.005).isActive = true
         createAccountButton.widthAnchor.constraint(equalTo: logInButton.widthAnchor, multiplier: 1).isActive = true
