@@ -24,7 +24,6 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
     
     // self.textField.layer.addBorder(edge: UIRectEdge.bottom, color: UIColor.red, thickness: 2, width: textFieldConstraintWidth.constant)
     
-    @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var createAccountButton: UIButton!
     @IBOutlet weak var logInButton: UIButton!
     @IBOutlet weak var backgroundImage: UIImageView!
@@ -84,28 +83,31 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
         
         print("we are on scroll view!")
         
+        // Add scrollView
+        
+        
         //Constraints for subView
-        self.view.sendSubviewToBack(scrollView)
+        /*self.view.sendSubviewToBack(scrollView)
         scrollView.translatesAutoresizingMaskIntoConstraints = false
         scrollView.topAnchor.constraint(equalTo: view.topAnchor, constant: 0).isActive = true
         scrollView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 0).isActive = true
         scrollView.rightAnchor.constraint(equalTo: view.rightAnchor, constant: 0).isActive = true
-        scrollView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0).isActive = true
+        scrollView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0).isActive = true*/
         
         
         //Constraints for background image
-        /*backgroundImage.translatesAutoresizingMaskIntoConstraints = false
+        backgroundImage.translatesAutoresizingMaskIntoConstraints = false
         backgroundImage.topAnchor.constraint(equalTo: view.topAnchor, constant: 0).isActive = true
         backgroundImage.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 0).isActive = true
         backgroundImage.rightAnchor.constraint(equalTo: view.rightAnchor, constant: 0).isActive = true
-        backgroundImage.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0).isActive = true*/
-        backgroundImage.translatesAutoresizingMaskIntoConstraints = false
-        backgroundImage.topAnchor.constraint(equalTo: scrollView.topAnchor, constant: 0).isActive = true
+        backgroundImage.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0).isActive = true
+        //backgroundImage.translatesAutoresizingMaskIntoConstraints = false
+        /*backgroundImage.topAnchor.constraint(equalTo: scrollView.topAnchor, constant: 0).isActive = true
         backgroundImage.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor, constant: 0).isActive = true
         backgroundImage.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor, constant: 0).isActive = true
         backgroundImage.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor, constant: 0).isActive = true
         backgroundImage.heightAnchor.constraint(equalTo: scrollView.heightAnchor, multiplier: 1).isActive = true
-        backgroundImage.widthAnchor.constraint(equalTo: scrollView.widthAnchor, multiplier: 1).isActive = true
+        backgroundImage.widthAnchor.constraint(equalTo: scrollView.widthAnchor, multiplier: 1).isActive = true*/
         
         //Contraints for overlay image
         overlay.translatesAutoresizingMaskIntoConstraints = false
