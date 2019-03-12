@@ -8,7 +8,9 @@
 
 import UIKit
 
-final class LogInViewController: UIViewController {
+final class LogInViewController: UIViewController, UITextFieldDelegate {
+    
+    // look at tutorial to fix constraints: https://www.natashatherobot.com/ios-autolayout-scrollview/
     
     // MARK: - IBOutlets
     
@@ -20,6 +22,12 @@ final class LogInViewController: UIViewController {
     @IBOutlet fileprivate weak var overlay: UIImageView!
     @IBOutlet fileprivate weak var BobaChatImage: UIImageView!
     
+    // Setting up a ScrollView
+    let scrollView: UIScrollView = {
+        let sv = UIScrollView()
+        return sv
+    }()
+    
     // MARK: - Properties
     
     // Offset between subviews
@@ -30,8 +38,26 @@ final class LogInViewController: UIViewController {
     override internal func viewDidLoad() {
         super.viewDidLoad()
 
-        //Update Constraints
+        // Update Constraints
         tweakUIAndConstaints()
+        
+        // Add observers for scrollView methods
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(LogInViewController.keyboardWillShow(_:)),
+            name: UIResponder.keyboardWillShowNotification,
+            object: nil
+        )
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(LogInViewController.keyboardWillHide(_:)),
+            name: UIResponder.keyboardWillHideNotification,
+            object: nil
+        )
+        
+        // Set up LogInViewController as textfield delegate
+        usernameTextField.delegate = self
+        passwordTextField.delegate = self
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -53,19 +79,14 @@ final class LogInViewController: UIViewController {
             return UIScreen.main.bounds.height
         }
         
-        // Setting up a ScrollView
-        let scrollView: UIScrollView = {
-            let sv = UIScrollView()
-            return sv
-        }()
-        self.view.addSubview(scrollView)
-        
         // Constraints for scrollView
+        self.view.addSubview(scrollView)
         scrollView.translatesAutoresizingMaskIntoConstraints = false
         scrollView.topAnchor.constraint(equalTo: view.topAnchor, constant: 0).isActive = true
         scrollView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 0).isActive = true
         scrollView.rightAnchor.constraint(equalTo: view.rightAnchor, constant: 0).isActive = true
         scrollView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0).isActive = true
+        print(scrollView.contentInset.bottom, "view started; before scrolling", screenHeight)
         
         // Constraints for background image
         scrollView.addSubview(backgroundImage)
@@ -128,4 +149,40 @@ final class LogInViewController: UIViewController {
         createAccountButton.topAnchor.constraint(equalToSystemSpacingBelow: logInButton.bottomAnchor, multiplier: screenHeight*0.005).isActive = true
         createAccountButton.widthAnchor.constraint(equalTo: logInButton.widthAnchor, multiplier: 1).isActive = true
     }
+    
+    func adjustForScrollView(shouldShow: Bool, notification: Notification) {
+        let userInfo = notification.userInfo ?? [:]
+        let keyboardFrame = (userInfo[UIResponder.keyboardFrameEndUserInfoKey] as! NSValue).cgRectValue
+        let endFrame = (userInfo[UIResponder.keyboardFrameBeginUserInfoKey] as! NSValue).cgRectValue
+        
+        // To protect against the scrollView scrolling again when another textField is selected
+        if keyboardFrame.equalTo(endFrame) {
+            return
+        }
+        
+        // Adds a padding value of 20 to either be subtracted or added to scrollView's contentInset
+        let adjustmentHeight = (keyboardFrame.height) * (shouldShow ? 2 : -2)
+        scrollView.contentInset.bottom += adjustmentHeight
+        scrollView.scrollIndicatorInsets.bottom += adjustmentHeight
+        
+    }
+    
+    @objc func keyboardWillShow(_ notification: Notification) {
+        adjustForScrollView(shouldShow: true, notification: notification)
+        print(scrollView.contentInset.bottom, "we scrolled up!")
+    }
+    
+    @objc func keyboardWillHide(_ notification: Notification) {
+        adjustForScrollView(shouldShow: false, notification: notification)
+        print(scrollView.contentInset.bottom, "we scrolled down!")
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.endEditing(true)
+        return false
+    }
+    
+    deinit {
+     NotificationCenter.default.removeObserver(self)
+     }
 }
