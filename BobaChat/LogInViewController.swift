@@ -8,7 +8,7 @@
 
 import UIKit
 
-final class LogInViewController: UIViewController {
+final class LogInViewController: UIViewController, UITextFieldDelegate {
     
     // MARK: - IBOutlets
     
@@ -32,6 +32,9 @@ final class LogInViewController: UIViewController {
 
         //Update Constraints
         tweakUIAndConstaints()
+        
+        self.usernameTextField.delegate = self
+        self.passwordTextField.delegate = self
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -63,7 +66,7 @@ final class LogInViewController: UIViewController {
         //Contraints for overlay image
         overlay.translatesAutoresizingMaskIntoConstraints = false
         overlay.centerXAnchor.constraint(equalTo: view.centerXAnchor, constant: 1).isActive = true
-        overlay.topAnchor.constraint(equalToSystemSpacingBelow: view.topAnchor, multiplier: screenHeight*0.013).isActive = true
+        overlay.topAnchor.constraint(equalToSystemSpacingBelow: view.topAnchor, multiplier: screenHeight*0.007).isActive = true
         overlay.heightAnchor.constraint(equalToConstant: screenHeight*0.859).isActive = true
         overlay.widthAnchor.constraint(equalToConstant: screenWidth).isActive = true
         
@@ -106,5 +109,10 @@ final class LogInViewController: UIViewController {
         //createAccountButton.topAnchor.constraint(equalToSystemSpacingBelow: logInButton.bottomAnchor, multiplier: screenHeight*0.003521).isActive = true
         createAccountButton.topAnchor.constraint(equalToSystemSpacingBelow: logInButton.bottomAnchor, multiplier: screenHeight*0.005).isActive = true
         createAccountButton.widthAnchor.constraint(equalTo: logInButton.widthAnchor, multiplier: 1).isActive = true
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return false
     }
 }

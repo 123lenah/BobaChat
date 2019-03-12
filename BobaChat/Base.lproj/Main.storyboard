@@ -31,14 +31,14 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SrK-w1-sDb">
                                 <rect key="frame" x="105" y="237" width="165" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="KohinoorBangla-Regular" family="Kohinoor Bangla" pointSize="12"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
                             </textField>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Boba Chat" translatesAutoresizingMaskIntoConstraints="NO" id="8Vp-Qk-DXK">
                                 <rect key="frame" x="128" y="181" width="120" height="20"/>
@@ -84,15 +84,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bubble_tea_background" translatesAutoresizingMaskIntoConstraints="NO" id="n6Z-dg-ipo">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bubble_tea_background" translatesAutoresizingMaskIntoConstraints="NO" id="n6Z-dg-ipo">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Overlay2" translatesAutoresizingMaskIntoConstraints="NO" id="hyt-y8-AVh">
-                                <rect key="frame" x="35" y="71" width="304" height="525"/>
+                                <rect key="frame" x="14" y="71" width="347" height="525"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pbj-bW-ZKy">
-                                <rect key="frame" x="105" y="421" width="165" height="55"/>
+                                <rect key="frame" x="95" y="421" width="185" height="57"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="CreateAccButton"/>
                             </button>
@@ -101,23 +102,17 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bMo-FP-1xz">
                                 <rect key="frame" x="95" y="311" width="185" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="aln-QN-e9p" firstAttribute="trailing" secondItem="n6Z-dg-ipo" secondAttribute="trailing" id="DlG-zO-SHc"/>
-                            <constraint firstItem="n6Z-dg-ipo" firstAttribute="leading" secondItem="aln-QN-e9p" secondAttribute="leading" id="Y9k-vS-TGo"/>
-                            <constraint firstItem="n6Z-dg-ipo" firstAttribute="top" secondItem="aln-QN-e9p" secondAttribute="top" id="ZG7-0H-XUd"/>
-                            <constraint firstItem="aln-QN-e9p" firstAttribute="bottom" secondItem="n6Z-dg-ipo" secondAttribute="bottom" id="wfX-DM-79d"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="aln-QN-e9p"/>
                     </view>
                     <navigationItem key="navigationItem" id="ZgN-NS-Xf3"/>
@@ -131,7 +126,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="q7L-Em-8LG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1073" y="966"/>
+            <point key="canvasLocation" x="2012" y="964"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="eJn-g2-qgs">
