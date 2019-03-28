@@ -13,6 +13,7 @@
 		CE25FD8A221D2595005029CD /* BobaChat.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CE25FD88221D2595005029CD /* BobaChat.xcdatamodeld */; };
 		CE25FD8C221D2597005029CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE25FD8B221D2597005029CD /* Assets.xcassets */; };
 		CE25FD8F221D2597005029CD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE25FD8D221D2597005029CD /* LaunchScreen.storyboard */; };
+		CE39CE88224C462300BADC81 /* EnterNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE39CE87224C462300BADC81 /* EnterNameViewController.swift */; };
 		CE539912222B79C900E05368 /* UITextField+OneLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE539911222B79C900E05368 /* UITextField+OneLine.swift */; };
 		CEDBB6652228E196005A1B57 /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDBB6642228E196005A1B57 /* CreateAccountViewController.swift */; };
 /* End PBXBuildFile section */
@@ -26,6 +27,7 @@
 		CE25FD8B221D2597005029CD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE25FD8E221D2597005029CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE25FD90221D2597005029CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE39CE87224C462300BADC81 /* EnterNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterNameViewController.swift; sourceTree = "<group>"; };
 		CE539911222B79C900E05368 /* UITextField+OneLine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+OneLine.swift"; sourceTree = "<group>"; };
 		CEDBB6642228E196005A1B57 /* CreateAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -64,6 +66,7 @@
 				CE25FD81221D2595005029CD /* AppDelegate.swift */,
 				CE1AF59A221F95430078B2F8 /* LogInViewController.swift */,
 				CEDBB6642228E196005A1B57 /* CreateAccountViewController.swift */,
+				CE39CE87224C462300BADC81 /* EnterNameViewController.swift */,
 				CE25FD85221D2595005029CD /* Main.storyboard */,
 				CE25FD8B221D2597005029CD /* Assets.xcassets */,
 				CE25FD8D221D2597005029CD /* LaunchScreen.storyboard */,
@@ -152,6 +155,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE39CE88224C462300BADC81 /* EnterNameViewController.swift in Sources */,
 				CEDBB6652228E196005A1B57 /* CreateAccountViewController.swift in Sources */,
 				CE539912222B79C900E05368 /* UITextField+OneLine.swift in Sources */,
 				CE1AF59B221F95430078B2F8 /* LogInViewController.swift in Sources */,

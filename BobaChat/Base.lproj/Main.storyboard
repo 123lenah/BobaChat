@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bcu-Bh-wNI">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -15,7 +15,7 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="LogInViewController" customModule="BobaChat" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bubble_tea_background" translatesAutoresizingMaskIntoConstraints="NO" id="lhO-Kd-4Dm">
@@ -48,6 +48,9 @@
                                 <rect key="frame" x="105" y="380" width="165" height="55"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="Log In"/>
+                                <connections>
+                                    <segue destination="UqM-qE-fQ1" kind="show" id="HIi-d9-6en"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aka-gi-jLc">
                                 <rect key="frame" x="105" y="475" width="165" height="57"/>
@@ -76,12 +79,64 @@
             </objects>
             <point key="canvasLocation" x="2012" y="131.78410794602701"/>
         </scene>
+        <!--Table View Controller-->
+        <scene sceneID="yjF-lT-QkJ">
+            <objects>
+                <tableViewController id="EbR-Gl-onZ" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="m4d-ll-DPz">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="85" id="6dX-70-fnj">
+                                <rect key="frame" x="0.0" y="28" width="414" height="85"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6dX-70-fnj" id="pY3-9Q-AQO">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="84.666666666666671"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FIY-Mb-iKK">
+                                            <rect key="frame" x="16" y="11" width="60" height="60"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="FirstName LastName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R8u-DA-Hih">
+                                            <rect key="frame" x="84" y="11" width="275" height="25"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" name="KohinoorBangla-Regular" family="Kohinoor Bangla" pointSize="20"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x3L-1D-nEm">
+                                            <rect key="frame" x="84" y="44" width="275" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" name="KohinoorBangla-Regular" family="Kohinoor Bangla" pointSize="15"/>
+                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="EbR-Gl-onZ" id="Jrk-jb-cqR"/>
+                            <outlet property="delegate" destination="EbR-Gl-onZ" id="vUV-ZB-hyn"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="Aj0-F9-9Xn">
+                        <barButtonItem key="leftBarButtonItem" title="Edit Account" id="bDc-CY-Gcv"/>
+                        <barButtonItem key="rightBarButtonItem" title="Add Friend" id="3d8-D7-Xu9"/>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JY0-Hs-c1c" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3964" y="131.78410794602701"/>
+        </scene>
         <!--Create Account View Controller-->
         <scene sceneID="Fr6-SZ-1Ue">
             <objects>
                 <viewController id="TZT-ze-ff5" customClass="CreateAccountViewController" customModule="BobaChat" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="khP-ST-T2B">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bubble_tea_background" translatesAutoresizingMaskIntoConstraints="NO" id="n6Z-dg-ipo">
@@ -96,6 +151,9 @@
                                 <rect key="frame" x="95" y="421" width="185" height="57"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="CreateAccButton"/>
+                                <connections>
+                                    <segue destination="KUJ-e0-b4A" kind="show" id="mkq-P7-DOI"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nhi-HY-vw9">
                                 <rect key="frame" x="95" y="235" width="185" height="30"/>
@@ -128,13 +186,80 @@
             </objects>
             <point key="canvasLocation" x="2012" y="964"/>
         </scene>
+        <!--Enter Name View Controller-->
+        <scene sceneID="maw-Ba-g9Q">
+            <objects>
+                <viewController id="KUJ-e0-b4A" customClass="EnterNameViewController" customModule="BobaChat" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="e44-u6-2qQ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="One Last Step!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zgB-1l-ZAH">
+                                <rect key="frame" x="89" y="79" width="236" height="49"/>
+                                <fontDescription key="fontDescription" name="KohinoorBangla-Semibold" family="Kohinoor Bangla" pointSize="35"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XvA-Ua-EA8">
+                                <rect key="frame" x="87" y="175" width="240" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VJm-17-UOv">
+                                <rect key="frame" x="87" y="257" width="240" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HRV-29-03I">
+                                <rect key="frame" x="87" y="323" width="240" height="57"/>
+                                <state key="normal" title="Button" image="CreateAccButton"/>
+                                <connections>
+                                    <action selector="registerAction:" destination="KUJ-e0-b4A" eventType="touchUpInside" id="mKp-g0-dcy"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="enternamepic2" translatesAutoresizingMaskIntoConstraints="NO" id="XJs-jJ-7aJ">
+                                <rect key="frame" x="101" y="441" width="212" height="295"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.97647058819999999" green="0.85098039219999999" blue="0.61176470589999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" red="0.94901960784313721" green="0.77254901960784317" blue="0.44705882352941179" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="XJs-jJ-7aJ" firstAttribute="leading" secondItem="Q19-lr-UxJ" secondAttribute="leading" constant="101" id="045-nw-e2e"/>
+                            <constraint firstItem="Q19-lr-UxJ" firstAttribute="trailing" secondItem="XvA-Ua-EA8" secondAttribute="trailing" constant="87" id="0lW-ke-n7i"/>
+                            <constraint firstItem="VJm-17-UOv" firstAttribute="leading" secondItem="XvA-Ua-EA8" secondAttribute="leading" id="1gV-gX-ehr"/>
+                            <constraint firstItem="VJm-17-UOv" firstAttribute="trailing" secondItem="XvA-Ua-EA8" secondAttribute="trailing" id="7Fs-rx-Ffz"/>
+                            <constraint firstItem="HRV-29-03I" firstAttribute="leading" secondItem="VJm-17-UOv" secondAttribute="leading" id="8pf-3y-kzU"/>
+                            <constraint firstItem="zgB-1l-ZAH" firstAttribute="top" secondItem="Q19-lr-UxJ" secondAttribute="top" constant="15" id="9oW-RA-xee"/>
+                            <constraint firstItem="XvA-Ua-EA8" firstAttribute="leading" secondItem="Q19-lr-UxJ" secondAttribute="leading" constant="87" id="Ak1-hg-9ni"/>
+                            <constraint firstItem="XJs-jJ-7aJ" firstAttribute="bottom" secondItem="Q19-lr-UxJ" secondAttribute="bottom" id="HAe-Y9-ME3"/>
+                            <constraint firstItem="XvA-Ua-EA8" firstAttribute="top" secondItem="zgB-1l-ZAH" secondAttribute="bottom" constant="47" id="JVw-bQ-DKM"/>
+                            <constraint firstItem="HRV-29-03I" firstAttribute="trailing" secondItem="VJm-17-UOv" secondAttribute="trailing" id="TyU-oc-mZg"/>
+                            <constraint firstItem="XJs-jJ-7aJ" firstAttribute="top" secondItem="HRV-29-03I" secondAttribute="bottom" constant="61" id="Udi-dX-IRz"/>
+                            <constraint firstItem="Q19-lr-UxJ" firstAttribute="trailing" secondItem="XJs-jJ-7aJ" secondAttribute="trailing" constant="101" id="XWO-28-nU6"/>
+                            <constraint firstItem="zgB-1l-ZAH" firstAttribute="centerX" secondItem="e44-u6-2qQ" secondAttribute="centerX" id="mGs-Y6-fz1"/>
+                            <constraint firstItem="HRV-29-03I" firstAttribute="top" secondItem="VJm-17-UOv" secondAttribute="bottom" constant="36" id="wk9-7K-8hn"/>
+                            <constraint firstItem="VJm-17-UOv" firstAttribute="top" secondItem="XvA-Ua-EA8" secondAttribute="bottom" constant="52" id="zcc-eQ-2pf"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Q19-lr-UxJ"/>
+                    </view>
+                    <connections>
+                        <outlet property="firstNameTextField" destination="XvA-Ua-EA8" id="hVr-O1-z7v"/>
+                        <outlet property="lastNameTextField" destination="VJm-17-UOv" id="rXv-90-7Vi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="12Y-Ty-emn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2871.1999999999998" y="962.96851574212906"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="eJn-g2-qgs">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="bcu-Bh-wNI" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="jOj-cm-9hQ">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -146,6 +271,24 @@
             </objects>
             <point key="canvasLocation" x="1072.8" y="131.78410794602701"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="VI6-4N-qkW">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="UqM-qE-fQ1" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ML5-OW-OFP">
+                        <rect key="frame" x="0.0" y="20" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="EbR-Gl-onZ" kind="relationship" relationship="rootViewController" id="dSi-vG-49i"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iQo-qA-YBG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3002" y="132"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Boba Chat" width="171" height="27"/>
@@ -155,5 +298,6 @@
         <image name="Overlay" width="367" height="573"/>
         <image name="Overlay2" width="347" height="403"/>
         <image name="bubble_tea_background" width="375" height="667"/>
+        <image name="enternamepic2" width="1236" height="2400"/>
     </resources>
 </document>
