@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		56A113259FE883FBE6F4D3A3 /* Pods_BobaChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5D33C210EFE03AB82B615CF /* Pods_BobaChat.framework */; };
 		CE1AF59B221F95430078B2F8 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1AF59A221F95430078B2F8 /* LogInViewController.swift */; };
 		CE25FD82221D2595005029CD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE25FD81221D2595005029CD /* AppDelegate.swift */; };
 		CE25FD87221D2595005029CD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE25FD85221D2595005029CD /* Main.storyboard */; };
@@ -14,11 +15,14 @@
 		CE25FD8C221D2597005029CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE25FD8B221D2597005029CD /* Assets.xcassets */; };
 		CE25FD8F221D2597005029CD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE25FD8D221D2597005029CD /* LaunchScreen.storyboard */; };
 		CE39CE88224C462300BADC81 /* EnterNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE39CE87224C462300BADC81 /* EnterNameViewController.swift */; };
+		CE39CE8E224C56D900BADC81 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CE39CE8D224C56D900BADC81 /* GoogleService-Info.plist */; };
 		CE539912222B79C900E05368 /* UITextField+OneLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE539911222B79C900E05368 /* UITextField+OneLine.swift */; };
 		CEDBB6652228E196005A1B57 /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDBB6642228E196005A1B57 /* CreateAccountViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4E18768CC6057513D96E8292 /* Pods-BobaChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BobaChat.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BobaChat/Pods-BobaChat.debug.xcconfig"; sourceTree = "<group>"; };
+		AB1683485B91A4C5E92A1598 /* Pods-BobaChat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BobaChat.release.xcconfig"; path = "Pods/Target Support Files/Pods-BobaChat/Pods-BobaChat.release.xcconfig"; sourceTree = "<group>"; };
 		CE1AF59A221F95430078B2F8 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		CE25FD7E221D2595005029CD /* BobaChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BobaChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE25FD81221D2595005029CD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -28,8 +32,10 @@
 		CE25FD8E221D2597005029CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE25FD90221D2597005029CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE39CE87224C462300BADC81 /* EnterNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterNameViewController.swift; sourceTree = "<group>"; };
+		CE39CE8D224C56D900BADC81 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CE539911222B79C900E05368 /* UITextField+OneLine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+OneLine.swift"; sourceTree = "<group>"; };
 		CEDBB6642228E196005A1B57 /* CreateAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
+		F5D33C210EFE03AB82B615CF /* Pods_BobaChat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BobaChat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,17 +43,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				56A113259FE883FBE6F4D3A3 /* Pods_BobaChat.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		413728829FEA72E44A0AAABC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4E18768CC6057513D96E8292 /* Pods-BobaChat.debug.xcconfig */,
+				AB1683485B91A4C5E92A1598 /* Pods-BobaChat.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		CE25FD75221D2595005029CD = {
 			isa = PBXGroup;
 			children = (
 				CE25FD80221D2595005029CD /* BobaChat */,
 				CE25FD7F221D2595005029CD /* Products */,
+				413728829FEA72E44A0AAABC /* Pods */,
+				FB1E2A50F0935CD446CEFFE7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,6 +89,7 @@
 				CE25FD8B221D2597005029CD /* Assets.xcassets */,
 				CE25FD8D221D2597005029CD /* LaunchScreen.storyboard */,
 				CE25FD90221D2597005029CD /* Info.plist */,
+				CE39CE8D224C56D900BADC81 /* GoogleService-Info.plist */,
 				CE25FD88221D2595005029CD /* BobaChat.xcdatamodeld */,
 			);
 			path = BobaChat;
@@ -84,6 +103,14 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		FB1E2A50F0935CD446CEFFE7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F5D33C210EFE03AB82B615CF /* Pods_BobaChat.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -91,9 +118,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CE25FD93221D2597005029CD /* Build configuration list for PBXNativeTarget "BobaChat" */;
 			buildPhases = (
+				15DF5CE5FF87983A7090C196 /* [CP] Check Pods Manifest.lock */,
 				CE25FD7A221D2595005029CD /* Sources */,
 				CE25FD7B221D2595005029CD /* Frameworks */,
 				CE25FD7C221D2595005029CD /* Resources */,
+				738EF8DD566485E9C74EC435 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -143,12 +172,62 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE25FD8F221D2597005029CD /* LaunchScreen.storyboard in Resources */,
+				CE39CE8E224C56D900BADC81 /* GoogleService-Info.plist in Resources */,
 				CE25FD8C221D2597005029CD /* Assets.xcassets in Resources */,
 				CE25FD87221D2595005029CD /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		15DF5CE5FF87983A7090C196 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BobaChat-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		738EF8DD566485E9C74EC435 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-BobaChat/Pods-BobaChat-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/ChameleonFramework/ChameleonFramework.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ChameleonFramework.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BobaChat/Pods-BobaChat-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		CE25FD7A221D2595005029CD /* Sources */ = {
@@ -304,6 +383,7 @@
 		};
 		CE25FD94221D2597005029CD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4E18768CC6057513D96E8292 /* Pods-BobaChat.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -321,6 +401,7 @@
 		};
 		CE25FD95221D2597005029CD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AB1683485B91A4C5E92A1598 /* Pods-BobaChat.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

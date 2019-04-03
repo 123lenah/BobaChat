@@ -4,4 +4,10 @@
    <FileRef
       location = "container:../BobaChat/BobaChat.xcodeproj">
    </FileRef>
+   <FileRef
+      location = "group:BobaChat.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Pods/Pods.xcodeproj">
+   </FileRef>
 </Workspace>
