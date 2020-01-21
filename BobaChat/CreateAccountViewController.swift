@@ -96,4 +96,24 @@ final class CreateAccountViewController: UIViewController, UITextFieldDelegate {
         self.view.endEditing(true)
         return false
     }
+    
+    func validateFields() -> Bool {
+        // Check that all fields are filled in
+        return addUsernameTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) != "" && addPasswordTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) != ""
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "createAccount") {
+            if (!validateFields()) {
+                let alert = UIAlertController(title: "Error", message: "Fill in fields before continuing", preferredStyle: UIAlertController.Style.alert)
+                alert.addAction(UIAlertAction(title: "Okay", style: UIAlertAction.Style.default, handler: nil))
+                self.present(alert, animated: true, completion: nil)
+            }
+            let destination = segue.destination as! EnterNameViewController
+            destination.username = addUsernameTextField.text!
+            destination.password = addPasswordTextField.text!
+        }
+    }
+    
+    
 }

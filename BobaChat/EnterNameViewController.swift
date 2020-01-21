@@ -7,11 +7,15 @@
 //
 
 import UIKit
+import Firebase
 
 class EnterNameViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var firstNameTextField: UITextField!
     @IBOutlet weak var lastNameTextField: UITextField!
+    
+    var username: String!
+    var password: String!
     
     override internal func viewWillAppear(_ animated: Bool) {
         // Show Navigation Bar
@@ -41,19 +45,31 @@ class EnterNameViewController: UIViewController, UITextFieldDelegate {
         return false
     }
     
+    // Check the fields and validate methods are correct
+    func validateFields() -> Bool {
+        
+        // Check that all fields are filled in
+        return firstNameTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) != "" && lastNameTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) != ""
+
+    }
+    
     
     @IBAction func registerAction(_ sender: Any) {
+        
+        // Validate the fields
+        if (!validateFields()) {
+            let alert = UIAlertController(title: "Error", message: "Fill in fields before continuing", preferredStyle: UIAlertController.Style.alert)
+            alert.addAction(UIAlertAction(title: "Okay", style: UIAlertAction.Style.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+        }
+        
+        // Create the user
+        
+        // Transition to the home screen
+        
+        //Auth.auth().createUser(withEmail: <#T##String#>, password: <#T##String#>, completion: <#T##AuthDataResultCallback?##AuthDataResultCallback?##(AuthDataResult?, Error?) -> Void#>)
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

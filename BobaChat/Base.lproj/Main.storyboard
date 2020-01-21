@@ -124,7 +124,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" id="Aj0-F9-9Xn">
                         <barButtonItem key="leftBarButtonItem" title="Sign Out" id="bDc-CY-Gcv"/>
-                        <barButtonItem key="rightBarButtonItem" title="Add Friend" id="3d8-D7-Xu9"/>
+                        <barButtonItem key="rightBarButtonItem" title="Message" id="3d8-D7-Xu9"/>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JY0-Hs-c1c" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -152,7 +152,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="CreateAccButton"/>
                                 <connections>
-                                    <segue destination="KUJ-e0-b4A" kind="show" id="mkq-P7-DOI"/>
+                                    <segue destination="KUJ-e0-b4A" kind="show" identifier="createAccount" id="mkq-P7-DOI"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nhi-HY-vw9">
